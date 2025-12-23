@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var opertaion=0;
+        function javab()
+        {
+            var number1=Number(document.getElementById('num1').value);
+            var number2=Number(document.getElementById('num2').value);
+            var sum=0;
+            if(opertaion == 2)
+            {
+                sum=number1+number2;
+            }
+            if(opertaion == 3)
+            {
+                sum=number1-number2;
+            }
+            if(opertaion == 4)
+            {
+                sum=number1*number2;
+            }
+            if(opertaion == 5)
+            {
+                sum=number1/number2;
+            }
+             document.getElementById('gavab').value=sum;
+           
+        }
+
+        function jam()
+        {
+            opertaion=2; // +
+        }
+
+        function tafrigh()
+        {
+            opertaion=3; // -
+        }
+
+        function zarb()
+        {
+            opertaion=4; // *
+        }
+
+        function taghsim()
+        {
+            opertaion=5; // /
+        }
+    function clearAll() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('gavab').value = '';
+            opertaion = 0; 
+        }
+    </script>
+</head>
+<body>
+    <div class="a1">
+        <p id="text1">\*-+ماشین حساب+-*/</p>
+<input  placeholder="عدد اول" type="text" name="num1" id="num1"><br>
+<input placeholder="عدد دوم" type="text" name="num2" id="num2"><br>
+<input  placeholder="جواب" type="text" name="gavab" id="gavab">
+<button class="b1" onclick="jam()">+</button><br>
+<button class="b2" onclick="tafrigh()">-</button><br>
+<button class="b3" onclick="zarb()">*</button><br>
+<button class="b4" onclick="taghsim()">/</button><br>
+<button class="b5" onclick="javab()">=</button><br>
+<button class="b6" onclick="clearAll()">C</button>
+    </div>
+</body>
+</html>
